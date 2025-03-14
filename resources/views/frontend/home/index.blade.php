@@ -123,7 +123,7 @@
                             <li class="cat-item-has-children"><a href="#!"><img src="assets/img/icon/cat_06.svg" alt="">external hard drive</a></li>
                             <li><a href="#!"><img src="assets/img/icon/cat_07.svg" alt="">Electric razor</a></li>
                             <li><a href="#!"><img src="assets/img/icon/cat_08.svg" alt="">Washing machine</a></li>
-                            <li class="cat-item-has-children"><a href="#!"><img src="assets/img/icon/cat_09.svg" alt="">Rice cooker</a></li>
+                            <li class="cat-item-has-children"><a href="#!"><img src="assets/img/icon/cat_09.svg" alt="">Decorative Lights</a></li>
                             <li><a href="#!"><img src="assets/img/icon/cat_10.svg" alt="">Telivsion & Monitor</a></li>
                             <li class="more-item"><a href="#!">+ More item</a></li>
                         </ul>
