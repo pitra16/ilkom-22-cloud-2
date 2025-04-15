@@ -23,7 +23,8 @@
                             </div>
                             <p>4517 Washington Ave. Manchester, Kentucky 39495 ashington Ave. Manchester,</p>
                             <ul class="footer__info mt-30">
-                                <li><i class="far fa-map-marker-alt"></i>254 Lillian Blvd, Holbrook</li>
+                                <li><i class="far fa-map-marker-alt"></i>Anduonohu 93232
+                                </li>
                                 <li><i class="fas fa-phone"></i>1-800-654-3210</li>
                             </ul>
                             <div class="apps-img mt-15 ul_li">
