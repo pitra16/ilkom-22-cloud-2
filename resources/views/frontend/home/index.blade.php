@@ -117,14 +117,14 @@
                         <ul class="list-unstyled">
                             <li class="cat-item-has-children"><a href="#!"><img src="assets/img/icon/cat_01.svg" alt="">Speaker Bluetooth</a></li>
                             <li class="cat-item-has-children"><a href="#!"><img src="assets/img/icon/cat_02.svg" alt="">Kamera digital</a></li>
-                            <li class="cat-item-has-children"><a href="#!"><img src="assets/img/icon/cat_03.svg" alt="">Printer laser</a></li>
+                            <li class="cat-item-has-children"><a href="#!"><img src="assets/img/icon/cat_03.svg" alt="">Alat Cukur</a></li>
                             <li><a href="#!"><img src="assets/img/icon/cat_04.svg" alt="">Penggorengan listrik</a></li>
-                            <li class="cat-item-has-children"><a href="#!"><img src="assets/img/icon/cat_05.svg" alt="">Penyedot debu robotik</a></li>
+                            <li class="cat-item-has-children"><a href="#!"><img src="assets/img/icon/cat_05.svg" alt="">Kipas angin</a></li>
                             <li class="cat-item-has-children"><a href="#!"><img src="assets/img/icon/cat_06.svg" alt="">hard drive eksternal</a></li>
-                            <li><a href="#!"><img src="assets/img/icon/cat_07.svg" alt="">Pisau cukur listrik</a></li>
+                            <li><a href="#!"><img src="assets/img/icon/cat_07.svg" alt="">Senter Penerangan</a></li>
                             <li><a href="#!"><img src="assets/img/icon/cat_08.svg" alt="">Mesin cuci</a></li>
                             <li class="cat-item-has-children"><a href="#!"><img src="assets/img/icon/cat_09.svg" alt="">Lampu Hias</a></li>
-                            <li><a href="#!"><img src="assets/img/icon/cat_10.svg" alt="">Televisi & Monitor</a></li>
+                            <li><a href="#!"><img src="assets/img/icon/cat_10.svg" alt="">Jam Tangan</a></li>
                             <li class="more-item"><a href="#!">+ Item lainnya</a></li>
                         </ul>
                     </div>
