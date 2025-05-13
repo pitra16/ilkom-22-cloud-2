@@ -21,7 +21,7 @@
                             <div class="footer__logo mb-20">
                                 <a href="index.html"><img src="assets/img/logo/logo.svg" alt=""></a>
                             </div>
-                            <p>4517 Washington Ave. Manchester, Kentucky 39495 ashington Ave. Manchester,</p>
+                            <p>Kampus Hijau Bumi Tridharma, Anduonohu, Kec. Kambu, Kota Kendari, Sulawesi Tenggara 93232</p>
                             <ul class="footer__info mt-30">
                                 <li><i class="far fa-map-marker-alt"></i>Anduonohu 93232
                                 </li>
@@ -39,13 +39,13 @@
                         <div class="footer__widget col-lg-3 col-md-6 mt-40">
                             <h2 class="title">Find It Fast</h2>
                             <ul class="quick-links">
-                                <li><a href="#!">Laptops & Computers</a></li>
-                                <li><a href="#!">Cameras & Photography</a></li>
-                                <li><a href="#!">Smart Phones & Tablets</a></li>
-                                <li><a href="#!">Video Games & Consoles</a></li>
+                                <li><a href="#!">komputer dan laptop</a></li>
+                                <li><a href="#!">Kamera & Fotografi</a></li>
+                                <li><a href="#!">Ponsel Pintar & Tablet</a></li>
+                                <li><a href="#!">Video Game & Konsol</a></li>
                                 <li><a href="#!">TV & Audio</a></li>
-                                <li><a href="#!">Gadgets</a></li>
-                                <li><a href="#!">Waterproof Headphones</a></li>
+                                <li><a href="#!">Gadget</a></li>
+                                <li><a href="#!">Headphone Tahan Air</a></li>
                             </ul>
                         </div>
 
