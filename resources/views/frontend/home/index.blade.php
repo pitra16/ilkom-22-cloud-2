@@ -3,8 +3,7 @@
 @section('content')
 <main>
 
-
-    <!-- feature start -->
+<!-- feature start -->
     <div class="feature pt-40 pb-30">
         <div class="container">
             <div class="feature__wrap ul_li">
@@ -13,8 +12,8 @@
                         <img src="assets/img/icon/feat_01.svg" alt="">
                     </div>
                     <div class="content">
-                        <h3>Pengiriman Gratis</h3>
-                        <p>Gratis ongkos kirim untuk pembelian lebih dari $100</p>
+                        <h3>Free Shipping</h3>
+                        <p>Free shipping over $100</p>
                     </div>
                 </div>
                 <div class="feature__item ul_li">
@@ -22,8 +21,8 @@
                         <img src="assets/img/icon/feat_02.svg" alt="">
                     </div>
                     <div class="content">
-                        <h3>Pembayaran Aman</h3>
-                        <p>dapatkan 100% Pembayaran Aman</p>
+                        <h3>Payment Secure</h3>
+                        <p>Got 100% Payment Safe</p>
                     </div>
                 </div>
                 <div class="feature__item ul_li">
@@ -31,8 +30,8 @@
                         <img src="assets/img/icon/feat_03.svg" alt="">
                     </div>
                     <div class="content">
-                        <h3>Dukungan 24/7</h3>
-                        <p>Dukungan 24/7 dengan kualitas terbaik</p>
+                        <h3>Support 24/7</h3>
+                        <p>Top quialty 24/7 Support</p>
                     </div>
                 </div>
                 <div class="feature__item ul_li">
@@ -40,8 +39,8 @@
                         <img src="assets/img/icon/feat_04.svg" alt="">
                     </div>
                     <div class="content">
-                        <h3>Uang Pelanggan Kembali</h3>
-                        <p>Uang Kembali 100%</p>
+                        <h3>100% Money Back</h3>
+                        <p>Cutomers Money Backs</p>
                     </div>
                 </div>
                 <div class="feature__item ul_li">
@@ -49,13 +48,14 @@
                         <img src="assets/img/icon/feat_05.svg" alt="">
                     </div>
                     <div class="content">
-                        <h3>Produk Berkualitas</h3>
-                        <p>Kami Menjamin Kualitas Produk</p>
+                        <h3>Quality Products</h3>
+                        <p>We Insure Product Quailty</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- feature end -->
 
     <!-- tab product start -->

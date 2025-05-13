@@ -4,8 +4,8 @@
                 <div class="container">
                     <div class="newslater__two ul_li">
                         <div class="newslater__content">
-                            <h2 class="title">We are ready to <span>help</span></h2>
-                            <p>For information Consult with our expert members</p>
+                            <h2 class="title">Kami Siap <span>Membantu</span></h2>
+                            <p>Untuk informasi Konsultasikan dengan anggota ahli kami</p>
                         </div>
                         <form class="newslater__form" action="#!">
                             <input placeholder="Enter your Email" type="text">
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <div class="footer__widget col-lg-3 col-md-6 mt-40">
-                            <h2 class="title">Find It Fast</h2>
+                            <h2 class="title">Temukan Cepat</h2>
                             <ul class="quick-links">
                                 <li><a href="#!">komputer dan laptop</a></li>
                                 <li><a href="#!">Kamera & Fotografi</a></li>
@@ -50,27 +50,27 @@
                         </div>
 
                         <div class="footer__widget col-lg-3 col-md-6 mt-40">
-                            <h2 class="title">Quick Links</h2>
+                            <h2 class="title">Tautan Cepat</h2>
                             <ul class="quick-links">
-                                <li><a href="#!">Your Account</a></li>
-                                <li><a href="#!">Returns & Exchanges</a></li>
-                                <li><a href="#!">Return Center</a></li>
-                                <li><a href="#!">Purchase Hisotry</a></li>
-                                <li><a href="#!">App Download</a></li>
-                                <li><a href="#!">Latest News Blog</a></li>
-                                <li><a href="#!">Shipping & Delivery</a></li>
+                                <li><a href="#!">Akun Anda</a></li>
+                                <li><a href="#!">Pengembalian & Penukaran</a></li>
+                                <li><a href="#!">Pusat Pengembalian</a></li>
+                                <li><a href="#!">Riwayat Pembelian</a></li>
+                                <li><a href="#!">Unduhan Aplikasi</a></li>
+                                <li><a href="#!">Blog Berita Terbaru</a></li>
+                                <li><a href="#!">Pengiriman & Pengantaran</a></li>
                             </ul>
                         </div>
                         <div class="footer__widget col-lg-3 col-md-6 mt-40">
-                            <h2 class="title">Service us</h2>
+                            <h2 class="title">Layanan Kami</h2>
                             <ul class="category">
-                                <li><a href="#!">Support Center</a></li>
-                                <li><a href="#!">Term & Conditions</a></li>
-                                <li><a href="#!">Shipping</a></li>
-                                <li><a href="#!">Privacy Policy</a></li>
-                                <li><a href="#!">Help</a></li>
-                                <li><a href="#!">Products Return</a></li>
-                                <li><a href="#!">FAQS</a></li>
+                                <li><a href="#!">Pusat Dukungan</a></li>
+                                <li><a href="#!">Syarat & Ketentuan</a></li>
+                                <li><a href="#!">Pengiriman</a></li>
+                                <li><a href="#!">Kebijakan Privasi</a></li>
+                                <li><a href="#!">Bantuan</a></li>
+                                <li><a href="#!">Pengembalian Produk</a></li>
+                                <li><a href="#!">FAQ</a></li>
                             </ul>
                         </div>
                     </div>
