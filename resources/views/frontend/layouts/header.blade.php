@@ -46,7 +46,7 @@
                                 <option value="12">Organik & Makanan Ringan</option>
 							</select>
 						</div>
-						<input type="text" name="search" id="search" placeholder="Search For Products"
+						<input type="text" name="search" id="search" placeholder="Cari Barang"
 							required />
 						<button type="submit"><i class="far fa-search"></i>
 						</button>
