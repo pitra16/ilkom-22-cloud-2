@@ -13,7 +13,7 @@
                     </div>
                     <div class="content">
                         <h3>Free Shipping</h3>
-                        <p>Free shipping over $100</p>
+                        <p>Gratis ongkos kirim untuk pembelian di atas $100</p>
                     </div>
                 </div>
                 <div class="feature__item ul_li">
