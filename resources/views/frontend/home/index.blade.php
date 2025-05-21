@@ -4049,7 +4049,7 @@
                 <div class="col-lg-5 mt-30">
                     <div class="vd-banner__single vd-banner__single-two pos-rel ul_li_between bg_img" data-background="assets/img/bg/bg_03.jpg">
                         <div class="content">
-                            <h2>Buy One. Get Free</h2>
+                            <h2>Beli Satu. Dapatkan Gratis</h2>
                             <p>Widescreen 4k ultra Laptop</p>
                             <div class="banner__btn mt-20">
                                 <a class="thm-btn thm-btn__black thm-btn__md  text-lowercase" href="#!">
