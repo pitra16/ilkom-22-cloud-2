@@ -22,7 +22,7 @@
                     </div>
                     <div class="content">
                         <h3>Payment Secure</h3>
-                        <p>Got 100% Payment Safe</p>
+                        <p>Dapat 100% Bayar Aman</p>
                     </div>
                 </div>
                 <div class="feature__item ul_li">
