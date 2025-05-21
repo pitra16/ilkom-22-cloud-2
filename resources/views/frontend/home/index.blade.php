@@ -31,7 +31,7 @@
                     </div>
                     <div class="content">
                         <h3>Support 24/7</h3>
-                        <p>Top quialty 24/7 Support</p>
+                        <p>Pelayanan Pelanggan 24/7</p>
                     </div>
                 </div>
                 <div class="feature__item ul_li">
