@@ -4026,7 +4026,7 @@
                 <div class="col-lg-7 mt-30">
                     <div class="vd-banner__single pos-rel ul_li_between bg_img" data-background="assets/img/bg/bg_02.jpg">
                         <div class="content">
-                            <h2>Buy One. Get Free delivery</h2>
+                            <h2>Beli Satu. Dapatkan pengiriman gratis</h2>
                             <p>Reference site about Lorem Ipsum</p>
                             <div class="banner__btn mt-20">
                                 <a class="thm-btn thm-btn__black" href="#!">
