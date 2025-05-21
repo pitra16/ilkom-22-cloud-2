@@ -35,15 +35,15 @@
 						<div class="select-box">
 							<select id="category" name="category">
 								<option value="">Semua Kategori</option>
-								<option value="4">Summer collections</option>
-								<option value="5">Breakfast & Dairy</option>
-								<option value="6">Beverage & Drinks</option>
-								<option value="7">Cocolate Box</option>
-								<option value="8">Dried Food Corner</option>
-								<option value="9">Frozen Foods</option>
-								<option value="10">Baby Food Corner</option>
-								<option value="11">Milk & Juices</option>
-								<option value="12">Organic & Snacks</option>
+                                <option value="4">Koleksi Musim Panas</option>
+                                <option value="5">Sarapan & Produk Susu</option>
+                                <option value="6">Minuman & Minuman</option>
+                                <option value="7">Kotak Cokelat</option>
+                                <option value="8">Pojok Makanan Kering</option>
+                                <option value="9">Makanan Beku</option>
+                                <option value="10">Pojok Makanan Bayi</option>
+                                <option value="11">Susu & Jus</option>
+                                <option value="12">Organik & Makanan Ringan</option>
 							</select>
 						</div>
 						<input type="text" name="search" id="search" placeholder="Search For Products"
