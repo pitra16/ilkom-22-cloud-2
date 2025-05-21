@@ -49,7 +49,7 @@
                     </div>
                     <div class="content">
                         <h3>Quality Products</h3>
-                        <p>We Insure Product Quailty</p>
+                        <p>Setiap Produk Berkualitas</p>
                     </div>
                 </div>
             </div>
