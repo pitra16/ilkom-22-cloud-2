@@ -3246,12 +3246,12 @@
                             <div class="product-cat__content">
                                 <h3 class="title">Electric Accesories</h3>
                                 <ul class="list-unstyled">
-                                    <li><a href="#!">Bluetooth speaker</a></li>
-                                    <li><a href="#!">Robotics vacuum</a></li>
-                                    <li><a href="#!">Laser printer</a></li>
-                                    <li><a href="#!">Electric frying pan</a></li>
-                                    <li><a href="#!">Digital camera</a></li>
-                                    <li><a href="#!">+ More item</a></li>
+                                    <li><a href="#!">Speaker Bluetooth</a></li>
+                                    <li><a href="#!">Penyedot debu robotik</a></li>
+                                    <li><a href="#!">Printer laser</a></li>
+                                    <li><a href="#!">Penggorengan listrik</a></li>
+                                    <li><a href="#!">Kamera digital</a></li>
+                                    <li><a href="#!">+ Item lainnya</a></li>
                                 </ul>
                             </div>
                         </div>
