@@ -34,7 +34,7 @@
                     <form class="header__search-box" action="#">
 						<div class="select-box">
 							<select id="category" name="category">
-								<option value="">All Categories</option>
+								<option value="">Semua Kategori</option>
 								<option value="4">Summer collections</option>
 								<option value="5">Breakfast & Dairy</option>
 								<option value="6">Beverage & Drinks</option>
