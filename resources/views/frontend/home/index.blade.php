@@ -40,7 +40,7 @@
                     </div>
                     <div class="content">
                         <h3>100% Money Back</h3>
-                        <p>Cutomers Money Backs</p>
+                        <p>100% Uang Kembali</p>
                     </div>
                 </div>
                 <div class="feature__item ul_li">
