@@ -1679,7 +1679,7 @@
         <div class="container">
             <div class="add__wrap bg_img" data-background="assets/img/bg/add_bg_01.jpg">
                 <div class="add__text">
-                    <span><span>10%</span>  Free Shipping On All Order Over <span>$99</span></span>
+                    <span><span>10%</span>  Gratis Ongkos Kirim Untuk Semua Pesanan Lebih Dari <span>$99</span></span>
                 </div>
             </div>
         </div>
