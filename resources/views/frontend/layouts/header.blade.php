@@ -4,10 +4,10 @@
                 <div class="container">
                     <div class="header__top-info ul_li_between mt-none-10">
                         <ul class="ul_li mt-10">
-                            <li><i class="far fa-map-marker-alt"></i>Store Location</li>
-                            <li><i class="far fa-truck"></i>Track Your Order</li>
-                            <li><i class="fas fa-phone"></i>Call Us For Enquiry</li>
-                            <li><i class="fas fa-heart"></i>Welcome to Radios. We provides Best Electronics item</li>
+                            <li><i class="far fa-map-marker-alt"></i>Lokasi Toko</li>
+                            <li><i class="far fa-truck"></i>Melacak Pesanan Anda</li>
+                            <li><i class="fas fa-phone"></i>Hubungi Kami Untuk Pertanyaan</li>
+                            <li><i class="fas fa-heart"></i>Selamat datang di Radios. Kami menyediakan barang elektronik terbaik</li>
                         </ul>
                         <div class="header__top-right ul_li mt-10">
                             <div class="date">
@@ -34,19 +34,19 @@
                     <form class="header__search-box" action="#">
 						<div class="select-box">
 							<select id="category" name="category">
-								<option value="">All Categories</option>
-								<option value="4">Summer collections</option>
-								<option value="5">Breakfast & Dairy</option>
-								<option value="6">Beverage & Drinks</option>
-								<option value="7">Cocolate Box</option>
-								<option value="8">Dried Food Corner</option>
-								<option value="9">Frozen Foods</option>
-								<option value="10">Baby Food Corner</option>
-								<option value="11">Milk & Juices</option>
-								<option value="12">Organic & Snacks</option>
+								<option value="">Semua Kategori</option>
+                                <option value="4">Koleksi Musim Panas</option>
+                                <option value="5">Sarapan & Produk Susu</option>
+                                <option value="6">Minuman & Minuman</option>
+                                <option value="7">Kotak Cokelat</option>
+                                <option value="8">Pojok Makanan Kering</option>
+                                <option value="9">Makanan Beku</option>
+                                <option value="10">Pojok Makanan Bayi</option>
+                                <option value="11">Susu & Jus</option>
+                                <option value="12">Organik & Makanan Ringan</option>
 							</select>
 						</div>
-						<input type="text" name="search" id="search" placeholder="Search For Products"
+						<input type="text" name="search" id="search" placeholder="Cari Barang"
 							required />
 						<button type="submit"><i class="far fa-search"></i>
 						</button>

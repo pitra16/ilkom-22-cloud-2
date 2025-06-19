@@ -2,12 +2,8 @@
 
 @section('content')
 <main>
-<<<<<<< HEAD
-    <!-- feature start -->
-=======
 
 <!-- feature start -->
->>>>>>> e135b6a87977272d66b2e25b33f7349e539d5ff6
     <div class="feature pt-40 pb-30">
         <div class="container">
             <div class="feature__wrap ul_li">
@@ -17,7 +13,7 @@
                     </div>
                     <div class="content">
                         <h3>Free Shipping</h3>
-                        <p>Gratis ongkir belanja $100+</p>
+                        <p>Free shipping over $100</p>
                     </div>
                 </div>
                 <div class="feature__item ul_li">
@@ -26,7 +22,7 @@
                     </div>
                     <div class="content">
                         <h3>Payment Secure</h3>
-                        <p>Dapat 100% Bayar Aman</p>
+                        <p>Got 100% Payment Safe</p>
                     </div>
                 </div>
                 <div class="feature__item ul_li">
@@ -35,7 +31,7 @@
                     </div>
                     <div class="content">
                         <h3>Support 24/7</h3>
-                        <p>Pelayanan Pelanggan 24/7</p>
+                        <p>Top quialty 24/7 Support</p>
                     </div>
                 </div>
                 <div class="feature__item ul_li">
@@ -44,7 +40,7 @@
                     </div>
                     <div class="content">
                         <h3>100% Money Back</h3>
-                        <p>100% Uang Kembali</p>
+                        <p>Cutomers Money Backs</p>
                     </div>
                 </div>
                 <div class="feature__item ul_li">
@@ -53,7 +49,7 @@
                     </div>
                     <div class="content">
                         <h3>Quality Products</h3>
-                        <p>Setiap Produk Berkualitas</p>
+                        <p>We Insure Product Quailty</p>
                     </div>
                 </div>
             </div>
@@ -1683,7 +1679,7 @@
         <div class="container">
             <div class="add__wrap bg_img" data-background="assets/img/bg/add_bg_01.jpg">
                 <div class="add__text">
-                    <span><span>10%</span>  Gratis Ongkos Kirim Untuk Semua Pesanan Lebih Dari <span>$99</span></span>
+                    <span><span>10%</span>  Free Shipping On All Order Over <span>$99</span></span>
                 </div>
             </div>
         </div>
@@ -3050,12 +3046,12 @@
                             <div class="product-cat__content">
                                 <h3 class="title">Smartphone & Tablet</h3>
                                 <ul class="list-unstyled">
-                                    <li><a href="#!">Speaker Bluetooth</a></li>
-                                    <li><a href="#!">Penyedot debu robotik</a></li>
-                                    <li><a href="#!">Printer laser</a></li>
-                                    <li><a href="#!">Penggorengan listrik</a></li>
-                                    <li><a href="#!">Kamera digital</a></li>
-                                    <li><a href="#!">+ Item lainnya</a></li>
+                                    <li><a href="#!">Bluetooth speaker</a></li>
+                                    <li><a href="#!">Robotics vacuum</a></li>
+                                    <li><a href="#!">Laser printer</a></li>
+                                    <li><a href="#!">Electric frying pan</a></li>
+                                    <li><a href="#!">Digital camera</a></li>
+                                    <li><a href="#!">+ More item</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -3099,12 +3095,12 @@
                             <div class="product-cat__content">
                                 <h3 class="title">Camera & Equipemnt</h3>
                                 <ul class="list-unstyled">
-                                    <li><a href="#!">Speaker Bluetooth</a></li>
-                                    <li><a href="#!">Penyedot debu robotik</a></li>
-                                    <li><a href="#!">Printer laser</a></li>
-                                    <li><a href="#!">Penggorengan listrik</a></li>
-                                    <li><a href="#!">Kamera digital</a></li>
-                                    <li><a href="#!">+ Item lainnya</a></li>
+                                    <li><a href="#!">Bluetooth speaker</a></li>
+                                    <li><a href="#!">Robotics vacuum</a></li>
+                                    <li><a href="#!">Laser printer</a></li>
+                                    <li><a href="#!">Electric frying pan</a></li>
+                                    <li><a href="#!">Digital camera</a></li>
+                                    <li><a href="#!">+ More item</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -3150,12 +3146,12 @@
                             <div class="product-cat__content">
                                 <h3 class="title">Computer & Laptops</h3>
                                 <ul class="list-unstyled">
-                                    <li><a href="#!">Speaker Bluetooth</a></li>
-                                    <li><a href="#!">Penyedot debu robotik</a></li>
-                                    <li><a href="#!">Printer laser</a></li>
-                                    <li><a href="#!">Penggorengan listrik</a></li>
-                                    <li><a href="#!">Kamera digital</a></li>
-                                    <li><a href="#!">+ Item lainnya</a></li>
+                                    <li><a href="#!">Bluetooth speaker</a></li>
+                                    <li><a href="#!">Robotics vacuum</a></li>
+                                    <li><a href="#!">Laser printer</a></li>
+                                    <li><a href="#!">Electric frying pan</a></li>
+                                    <li><a href="#!">Digital camera</a></li>
+                                    <li><a href="#!">+ More item</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -3199,12 +3195,12 @@
                             <div class="product-cat__content">
                                 <h3 class="title">Home Equipment</h3>
                                 <ul class="list-unstyled">
-                                    <li><a href="#!">Speaker Bluetooth</a></li>
-                                    <li><a href="#!">Penyedot debu robotik</a></li>
-                                    <li><a href="#!">Printer laser</a></li>
-                                    <li><a href="#!">Penggorengan listrik</a></li>
-                                    <li><a href="#!">Kamera digital</a></li>
-                                    <li><a href="#!">+ Item lainnya</a></li>
+                                    <li><a href="#!">Bluetooth speaker</a></li>
+                                    <li><a href="#!">Robotics vacuum</a></li>
+                                    <li><a href="#!">Laser printer</a></li>
+                                    <li><a href="#!">Electric frying pan</a></li>
+                                    <li><a href="#!">Digital camera</a></li>
+                                    <li><a href="#!">+ More item</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -3250,12 +3246,12 @@
                             <div class="product-cat__content">
                                 <h3 class="title">Electric Accesories</h3>
                                 <ul class="list-unstyled">
-                                    <li><a href="#!">Speaker Bluetooth</a></li>
-                                    <li><a href="#!">Penyedot debu robotik</a></li>
-                                    <li><a href="#!">Printer laser</a></li>
-                                    <li><a href="#!">Penggorengan listrik</a></li>
-                                    <li><a href="#!">Kamera digital</a></li>
-                                    <li><a href="#!">+ Item lainnya</a></li>
+                                    <li><a href="#!">Bluetooth speaker</a></li>
+                                    <li><a href="#!">Robotics vacuum</a></li>
+                                    <li><a href="#!">Laser printer</a></li>
+                                    <li><a href="#!">Electric frying pan</a></li>
+                                    <li><a href="#!">Digital camera</a></li>
+                                    <li><a href="#!">+ More item</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -3299,12 +3295,12 @@
                             <div class="product-cat__content">
                                 <h3 class="title">Gaming Accesiores</h3>
                                 <ul class="list-unstyled">
-                                    <li><a href="#!">Speaker Bluetooth</a></li>
-                                    <li><a href="#!">Penyedot debu robotik</a></li>
-                                    <li><a href="#!">Printer laser</a></li>
-                                    <li><a href="#!">Penggorengan listrik</a></li>
-                                    <li><a href="#!">Kamera digital</a></li>
-                                    <li><a href="#!">+ Item lainnya</a></li>
+                                    <li><a href="#!">Bluetooth speaker</a></li>
+                                    <li><a href="#!">Robotics vacuum</a></li>
+                                    <li><a href="#!">Laser printer</a></li>
+                                    <li><a href="#!">Electric frying pan</a></li>
+                                    <li><a href="#!">Digital camera</a></li>
+                                    <li><a href="#!">+ More item</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -4030,7 +4026,7 @@
                 <div class="col-lg-7 mt-30">
                     <div class="vd-banner__single pos-rel ul_li_between bg_img" data-background="assets/img/bg/bg_02.jpg">
                         <div class="content">
-                            <h2>Beli Satu. Dapatkan pengiriman gratis</h2>
+                            <h2>Buy One. Get Free delivery</h2>
                             <p>Reference site about Lorem Ipsum</p>
                             <div class="banner__btn mt-20">
                                 <a class="thm-btn thm-btn__black" href="#!">
@@ -4053,7 +4049,7 @@
                 <div class="col-lg-5 mt-30">
                     <div class="vd-banner__single vd-banner__single-two pos-rel ul_li_between bg_img" data-background="assets/img/bg/bg_03.jpg">
                         <div class="content">
-                            <h2>Beli Satu. Dapatkan Gratis</h2>
+                            <h2>Buy One. Get Free</h2>
                             <p>Widescreen 4k ultra Laptop</p>
                             <div class="banner__btn mt-20">
                                 <a class="thm-btn thm-btn__black thm-btn__md  text-lowercase" href="#!">
