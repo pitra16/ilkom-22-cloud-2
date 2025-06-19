@@ -11,22 +11,19 @@ class OrderController extends Controller
 {
     public function createOrder(Request $request)
     {
-        // Simpan order ke database
         $order = Order::create([
             'order_id'    => 'INV-' . time(),
-            'user_id'     =>  1, // Ambil user ID yang login
+            'user_id'     =>  1,
             'total_price' => $request->total_price,
             'status'      => 'pending',
         ]);
 
-        // Konfigurasi Midtrans (gunakan config() dengan benar)
         Config::$serverKey = config('midtrans.server_key');
-        Config::$clientKey = config('midtrans.client_key'); // Tambahkan jika perlu
+        Config::$clientKey = config('midtrans.client_key');
         Config::$isProduction = config('midtrans.is_production');
         Config::$isSanitized = true;
         Config::$is3ds = true;
 
-        // Buat parameter pembayaran
         $transaction_details = [
             'order_id'    => $order->order_id,
             'gross_amount' => $order->total_price,
@@ -42,7 +39,6 @@ class OrderController extends Controller
             'customer_details'    => $customer_details,
         ];
 
-        // Buat Snap Token
         try {
             $snapToken = Snap::getSnapToken($transaction);
             return response()->json(['snap_token' => $snapToken]);
