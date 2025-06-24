@@ -7,9 +7,18 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Yajra\DataTables\Facades\DataTables;
 
 class UsersController extends Controller
 {
+
+      public function dataTable()
+    {
+        $data = User::query();
+
+        return DataTables::of($data)
+            ->make(true);
+    }
     public function store(Request $request)
     {
         $validated = $request->validate([

@@ -15,7 +15,10 @@ Route::withoutMiddleware([VerifyCsrfToken::class])->group(function(){
   Route::post('users/store', [UsersController::class, 'store'])->name('users.store');
 });
 
-Route::middleware('auth')->group(function(){
+Route::middleware('auth')->group(function () {
+    Route::get('/tesAuth', function () {
+        return "BERHASIL MASUK";
+    })->name('tesAuth');
 });
 
 Route::controller(HomeController::class)->group(function(){
@@ -39,6 +42,7 @@ Route::middleware('auth')->group(function(){
     Route::controller(DashboardController::class)->group(function(){
         Route::get('/backend/dashboard', 'index')->name('backend.dashboard.index');
     });
+    Route::get('users/dataTable', [UsersController::class, 'dataTable'])->name('users.dataTable');
     Route::controller(ActivityLogController::class)->group(function(){
         Route::get('/backend/activitylogs', 'index')->name('backend.activitylogs.index');
         Route::get('/backend/activitylogs/dataTable', 'dataTable')->name('backend.activitylogs.dataTable');

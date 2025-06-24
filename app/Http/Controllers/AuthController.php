@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
@@ -16,33 +17,40 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-    public function loginSiluman(Request $request)
-    {
-       $validator = Validator::make($request->all(), [
-           'email' => 'required|email',
-           'password' => 'required|min:6',
-       ]);
+public function loginSiluman(Request $request)
+{
+    $validator = Validator::make($request->all(), [
+        'email' => 'required|email',
+        'password' => 'required|min:6',
+    ]);
 
-       if ($validator->fails()) {
-           return response()->json([
-               'success' => false,
-               'message' => $validator->errors()->first(),
-           ]);
-       }
+    if ($validator->fails()) {
+        return response()->json([
+            'success' => false,
+            'message' => $validator->errors()->first(),
+        ]);
+    }
 
-       if (Auth::attempt($request->only('email', 'password'))) {
-           $users = User::all();
-           return response()->json([
-               'success' => true,
-               'message' => $users
-           ]);
-       } else {
-           return response()->json([
-               'success' => false,
-               'message' => 'Invalid email or password.',
-           ]);
-       }
-   }
+    if (Auth::attempt($request->only('email', 'password'))) {
+        $users = User::all();
+        $sessionId = Session::getId();
+        $csrfToken = csrf_token();
+        $xsrfToken = Cookie::get('XSRF-TOKEN');
+
+        return response()->json([
+            'success' => true,
+            'message' => $users,
+            'session' => $sessionId,
+            'csrf_token' => $csrfToken,
+            'xsrf_token' => $xsrfToken,
+        ]);
+    } else {
+        return response()->json([
+            'success' => false,
+            'message' => 'Invalid email or password.',
+        ]);
+    }
+}
 
     public function login(Request $request)
     {
