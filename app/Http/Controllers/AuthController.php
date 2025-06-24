@@ -17,41 +17,6 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-public function loginSiluman(Request $request)
-{
-    $validator = Validator::make($request->all(), [
-        'email' => 'required|email',
-        'password' => 'required|min:6',
-    ]);
-
-    if ($validator->fails()) {
-        return response()->json([
-            'success' => false,
-            'message' => $validator->errors()->first(),
-        ]);
-    }
-
-    if (Auth::attempt($request->only('email', 'password'))) {
-        $users = User::all();
-        $sessionId = Session::getId();
-        $csrfToken = csrf_token();
-        $xsrfToken = Cookie::get('XSRF-TOKEN');
-
-        return response()->json([
-            'success' => true,
-            'message' => $users,
-            'session' => $sessionId,
-            'csrf_token' => $csrfToken,
-            'xsrf_token' => $xsrfToken,
-        ]);
-    } else {
-        return response()->json([
-            'success' => false,
-            'message' => 'Invalid email or password.',
-        ]);
-    }
-}
-
     public function login(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -90,20 +55,5 @@ public function loginSiluman(Request $request)
         Session::flash('logout_message', 'Successfully Logout');
 
         return response()->json(['message' => 'Successfully Logout']);
-    }
-
-    public function vulnerableLogin(Request $request)
-    {
-        $email = $request->input('email');
-        $password = $request->input('password');
-
-        $query = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
-
-        $user = DB::select($query);
-
-        return response()->json([
-            'query' => $query,
-            'result' => $user,
-        ]);
     }
 }

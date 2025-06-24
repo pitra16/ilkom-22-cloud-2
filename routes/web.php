@@ -9,18 +9,6 @@ use App\Http\Controllers\OrderController;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Support\Facades\Route;
 
-Route::withoutMiddleware([VerifyCsrfToken::class])->group(function(){
-  Route::post('loginSiluman', [AuthController::class, 'loginSiluman']);
-  Route::post('vulnerableLogin', [AuthController::class, 'vulnerableLogin']);
-  Route::post('users/store', [UsersController::class, 'store'])->name('users.store');
-});
-
-Route::middleware('auth')->group(function () {
-    Route::get('/tesAuth', function () {
-        return "BERHASIL MASUK";
-    })->name('tesAuth');
-});
-
 Route::controller(HomeController::class)->group(function(){
     Route::get('/', 'index');
 });
@@ -43,6 +31,7 @@ Route::middleware('auth')->group(function(){
         Route::get('/backend/dashboard', 'index')->name('backend.dashboard.index');
     });
     Route::get('users/dataTable', [UsersController::class, 'dataTable'])->name('users.dataTable');
+    Route::post('users/store', [UsersController::class, 'store'])->name('users.store');
     Route::controller(ActivityLogController::class)->group(function(){
         Route::get('/backend/activitylogs', 'index')->name('backend.activitylogs.index');
         Route::get('/backend/activitylogs/dataTable', 'dataTable')->name('backend.activitylogs.dataTable');
