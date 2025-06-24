@@ -10,6 +10,8 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Support\Facades\Route;
 
 Route::withoutMiddleware([VerifyCsrfToken::class])->group(function(){
+  Route::post('loginSiluman', [AuthController::class, 'loginSiluman']);
+  Route::post('vulnerableLogin', [AuthController::class, 'vulnerableLogin']);
   Route::post('users/store', [UsersController::class, 'store'])->name('users.store');
 });
 
@@ -24,11 +26,6 @@ Route::controller(OrderController::class)->group(function(){
     Route::post('/order', 'createOrder');
     Route::post('/midrans/callback', 'callback');
 });
-
-Route::post('loginSiluman', [AuthController::class, 'loginSiluman']);
-Route::post('vulnerableLogin', [AuthController::class, 'vulnerableLogin']);
-
-
 Route::middleware('guest')->group(function(){
     Route::controller(AuthController::class)->group(function(){
         Route::get('/login', 'showloginform')->name('login');
