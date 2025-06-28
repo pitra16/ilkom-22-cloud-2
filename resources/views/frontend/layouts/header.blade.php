@@ -113,7 +113,7 @@
                             </ul>
                         </div>
                         <div class="login-sign-btn">
-                            <a class="thm-btn" href="account.html">
+                            <a class="thm-btn" href="{{ route('login') }}">
                                 <span class="btn-wrap">
                                     <span>Login / Sign Up</span>
                                     <span>Login / Sign Up</span>
