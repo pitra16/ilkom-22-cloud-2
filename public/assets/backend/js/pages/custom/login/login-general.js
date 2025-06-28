@@ -1,6 +1,5 @@
 "use strict";
 
-// Class Definition
 var KTLogin = function() {
     var _login;
 
@@ -23,24 +22,23 @@ var KTLogin = function() {
         var submitButton = document.getElementById("kt_login_signin_submit");
 
         if (!form || !submitButton) {
-            console.error("Form or submit button not found!");
+            console.error("Sign-in form or submit button not found!");
             return;
         }
 
-        // Init form validation rules
         validation = FormValidation.formValidation(form, {
             fields: {
                 username: {
                     validators: {
                         notEmpty: {
-                            message: "Username is required",
+                            message: "Username harus diisi",
                         },
                     },
                 },
                 password: {
                     validators: {
                         notEmpty: {
-                            message: "Password is required",
+                            message: "Password harus diisi",
                         },
                     },
                 },
@@ -60,7 +58,6 @@ var KTLogin = function() {
                     submitButton.setAttribute("data-kt-indicator", "on");
                     submitButton.disabled = true;
 
-                    // AJAX request
                     $.ajax({
                         url: form.getAttribute("action"),
                         type: "POST",
@@ -71,36 +68,55 @@ var KTLogin = function() {
                         success: function (response) {
                             if (response.success) {
                                 Swal.fire({
-                                    text: "You have successfully logged in!",
+                                    text: response.message || "Anda berhasil login!",
                                     icon: "success",
                                     buttonsStyling: false,
-                                    confirmButtonText: "Ok, got it!",
+                                    confirmButtonText: "Oke, mengerti!",
                                     customClass: {
                                         confirmButton: "btn btn-primary",
                                     },
                                 }).then(function (result) {
-                                    if (result.isConfirmed) {
+                                    if (result.isConfirmed && response.redirect_url) {
                                         window.location.href = response.redirect_url;
                                     }
                                 });
                             } else {
                                 Swal.fire({
-                                    text: response.message,
+                                    text: response.message || "Gagal login. Silakan cek kredensial Anda.",
                                     icon: "error",
                                     buttonsStyling: false,
-                                    confirmButtonText: "Ok, got it!",
+                                    confirmButtonText: "Oke, mengerti!",
                                     customClass: {
                                         confirmButton: "btn btn-primary",
                                     },
                                 });
                             }
                         },
-                        error: function () {
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            console.error("AJAX Error (Sign In):", textStatus, errorThrown, jqXHR);
+                            let errorMessage = "Terjadi kesalahan saat login. Silakan coba lagi nanti.";
+
+                            if (jqXHR.responseJSON && jqXHR.responseJSON.message) {
+                                errorMessage = jqXHR.responseJSON.message;
+                            } else if (jqXHR.status === 401) { // Unauthorized
+                                errorMessage = "Email atau password salah. Silakan coba lagi.";
+                            } else if (jqXHR.status === 422 && jqXHR.responseJSON && jqXHR.responseJSON.errors) {
+                                let validationErrors = [];
+                                for (const field in jqXHR.responseJSON.errors) {
+                                    if (jqXHR.responseJSON.errors.hasOwnProperty(field)) {
+                                        validationErrors = validationErrors.concat(jqXHR.responseJSON.errors[field]);
+                                    }
+                                }
+                                if (validationErrors.length > 0) {
+                                    errorMessage = validationErrors.join('<br>');
+                                }
+                            }
+
                             Swal.fire({
-                                text: "Terjadi Kesalahan Saat Mencoba Login, Silahkan Cek Email & Password Anda.",
+                                text: errorMessage,
                                 icon: "error",
                                 buttonsStyling: false,
-                                confirmButtonText: "Ok, got it!",
+                                confirmButtonText: "Oke, mengerti!",
                                 customClass: {
                                     confirmButton: "btn btn-primary",
                                 },
@@ -113,10 +129,10 @@ var KTLogin = function() {
                     });
                 } else {
                     Swal.fire({
-                        text: "Terjadi Kesalahan Saat Mencoba Login, Silahkan Cek Email & Password Anda.",
+                        text: "Harap masukkan username dan password Anda.",
                         icon: "error",
                         buttonsStyling: false,
-                        confirmButtonText: "Ok, got it!",
+                        confirmButtonText: "Oke, mengerti!",
                         customClass: {
                             confirmButton: "btn btn-primary",
                         },
@@ -125,163 +141,170 @@ var KTLogin = function() {
             });
         });
 
-        // Handle forgot button
         $("#kt_login_forgot").on("click", function (e) {
             e.preventDefault();
             _showForm("forgot");
         });
 
-        // Handle signup
         $("#kt_login_signup").on("click", function (e) {
             e.preventDefault();
             _showForm("signup");
         });
     };
 
-    return {
-        init: function () {
-            _login = $("#kt_login");
-
-            if (!_login.length) {
-                console.error("Login container not found!");
-                return;
-            }
-
-            _handleSignInForm();
-        },
-    };
-
-    var _handleSignUpForm = function(e) {
+    var _handleSignUpForm = function() {
         var validation;
         var form = KTUtil.getById('kt_login_signup_form');
+        var submitButton = document.getElementById("kt_login_signup_submit");
 
-        // Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
+        if (!form || !submitButton) {
+            console.error("Sign-up form or submit button not found!");
+            return;
+        }
+
         validation = FormValidation.formValidation(
-			form,
-			{
-				fields: {
-					fullname: {
-						validators: {
-							notEmpty: {
-                            message: 'Username is required'
-							}
-						}
-					},
-					email: {
+            form,
+            {
+                fields: {
+                    fullname: {
                         validators: {
-							notEmpty: {
-								message: 'Email address is required'
-							},
+                            notEmpty: {
+                                message: 'Nama lengkap harus diisi'
+                            }
+                        }
+                    },
+                    email: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Alamat email harus diisi'
+                            },
                             emailAddress: {
-								message: 'The value is not a valid email address'
-							}
-						}
-					},
+                                message: 'Nilai bukan alamat email yang valid'
+                            }
+                        }
+                    },
                     password: {
                         validators: {
                             notEmpty: {
-                                message: 'The password is required'
+                                message: 'Password harus diisi'
+                            },
+                            stringLength: {
+                                min: 8,
+                                message: 'Password harus minimal 8 karakter'
                             }
                         }
                     },
                     cpassword: {
                         validators: {
                             notEmpty: {
-                                message: 'The password confirmation is required'
+                                message: 'Konfirmasi password harus diisi'
                             },
                             identical: {
                                 compare: function() {
                                     return form.querySelector('[name="password"]').value;
                                 },
-                                message: 'The password and its confirm are not the same'
+                                message: 'Password dan konfirmasinya tidak sama'
                             }
                         }
                     },
                     agree: {
                         validators: {
                             notEmpty: {
-                                message: 'You must accept the terms and conditions'
+                                message: 'Anda harus menyetujui syarat dan ketentuan'
                             }
                         }
                     },
-				},
-				plugins: {
-					trigger: new FormValidation.plugins.Trigger(),
-					bootstrap: new FormValidation.plugins.Bootstrap()
-				}
-			}
-		);
+                },
+                plugins: {
+                    trigger: new FormValidation.plugins.Trigger(),
+                    submitButton: new FormValidation.plugins.SubmitButton(),
+                    bootstrap: new FormValidation.plugins.Bootstrap()
+                }
+            }
+        );
 
-        $('#kt_login_signin_submit').on('click', function (e) {
+        submitButton.addEventListener('click', function (e) {
             e.preventDefault();
 
-            validator.validate().then(function (status) {
+            validation.validate().then(function (status) {
                 if (status === "Valid") {
                     submitButton.setAttribute("data-kt-indicator", "on");
                     submitButton.disabled = true;
 
-                    // AJAX request
                     $.ajax({
-                        url: form.getAttribute("action"),
+                        url: 'actionsignup', // Ensure this matches your Laravel route, e.g., '{{ route("actionsignup") }}'
                         type: "POST",
                         data: $(form).serialize(),
                         headers: {
-                            "X-CSRF-TOKEN": $(
-                                'meta[name="csrf-token"]'
-                            ).attr("content"),
+                            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
                         },
                         success: function (response) {
-                            if (response.success) {
+                            if (response.success) { // Now checking for response.success
                                 Swal.fire({
-                                    text: "You have successfully logged in!",
+                                    text: response.message || "Registrasi berhasil! Anda sekarang bisa login.",
                                     icon: "success",
                                     buttonsStyling: false,
-                                    confirmButtonText: "Ok, got it!",
+                                    confirmButtonText: "Oke, mengerti!",
                                     customClass: {
                                         confirmButton: "btn btn-primary",
                                     },
                                 }).then(function (result) {
                                     if (result.isConfirmed) {
-                                        window.location.href =
-                                            response.redirect_url;
+                                        _showForm('signin');
                                     }
                                 });
                             } else {
                                 Swal.fire({
-                                    text: response.message,
+                                    text: response.message || "Terjadi kesalahan saat registrasi. Silakan coba lagi.",
                                     icon: "error",
                                     buttonsStyling: false,
-                                    confirmButtonText: "Ok, got it!",
+                                    confirmButtonText: "Oke, mengerti!",
                                     customClass: {
                                         confirmButton: "btn btn-primary",
                                     },
                                 });
                             }
                         },
-                        error: function () {
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            console.error("AJAX Error (Sign Up):", textStatus, errorThrown, jqXHR);
+
+                            let errorMessage = "Terjadi kesalahan saat registrasi. Silakan coba lagi nanti.";
+
+                            if (jqXHR.responseJSON && jqXHR.responseJSON.message) {
+                                errorMessage = jqXHR.responseJSON.message;
+                            } else if (jqXHR.status === 422 && jqXHR.responseJSON && jqXHR.responseJSON.errors) {
+                                let validationErrors = [];
+                                for (const field in jqXHR.responseJSON.errors) {
+                                    if (jqXHR.responseJSON.errors.hasOwnProperty(field)) {
+                                        validationErrors = validationErrors.concat(jqXHR.responseJSON.errors[field]);
+                                    }
+                                }
+                                if (validationErrors.length > 0) {
+                                    errorMessage = validationErrors.join('<br>');
+                                }
+                            }
+
                             Swal.fire({
-                                text: "Terjadi Kesalahan Saat Mencoba Login, Silahkan Cek Email & Password Anda.",
+                                text: errorMessage,
                                 icon: "error",
                                 buttonsStyling: false,
-                                confirmButtonText: "Ok, got it!",
+                                confirmButtonText: "Oke, mengerti!",
                                 customClass: {
                                     confirmButton: "btn btn-primary",
                                 },
                             });
                         },
                         complete: function () {
-                            submitButton.removeAttribute(
-                                "data-kt-indicator"
-                            );
+                            submitButton.removeAttribute("data-kt-indicator");
                             submitButton.disabled = false;
                         },
                     });
                 } else {
                     Swal.fire({
-                        text: "Terjadi Kesalahan Saat Mencoba Login, Silahkan Cek Email & Password Anda.",
+                        text: "Harap isi semua kolom yang wajib diisi dengan benar untuk mendaftar.",
                         icon: "error",
                         buttonsStyling: false,
-                        confirmButtonText: "Ok, got it!",
+                        confirmButtonText: "Oke, mengerti!",
                         customClass: {
                             confirmButton: "btn btn-primary",
                         },
@@ -290,86 +313,27 @@ var KTLogin = function() {
             });
         });
 
-        // Handle cancel button
         $('#kt_login_signup_cancel').on('click', function (e) {
             e.preventDefault();
-
             _showForm('signin');
         });
-    }
+    };
 
-    var _handleForgotForm = function(e) {
-        var validation;
-
-        // Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
-        validation = FormValidation.formValidation(
-			KTUtil.getById('kt_login_forgot_form'),
-			{
-				fields: {
-					email: {
-						validators: {
-							notEmpty: {
-								message: 'Email address is required'
-							},
-                            emailAddress: {
-								message: 'The value is not a valid email address'
-							}
-						}
-					}
-				},
-				plugins: {
-					trigger: new FormValidation.plugins.Trigger(),
-					bootstrap: new FormValidation.plugins.Bootstrap()
-				}
-			}
-		);
-
-        // Handle submit button
-        $('#kt_login_forgot_submit').on('click', function (e) {
-            e.preventDefault();
-
-            validation.validate().then(function(status) {
-		        if (status == 'Valid') {
-                    // Submit form
-                    KTUtil.scrollTop();
-				} else {
-					swal.fire({
-		                text: "Sorry, looks like there are some errors detected, please try again.",
-		                icon: "error",
-		                buttonsStyling: false,
-		                confirmButtonText: "Ok, got it!",
-                        customClass: {
-    						confirmButton: "btn font-weight-bold btn-light-primary"
-    					}
-		            }).then(function() {
-						KTUtil.scrollTop();
-					});
-				}
-		    });
-        });
-
-        // Handle cancel button
-        $('#kt_login_forgot_cancel').on('click', function (e) {
-            e.preventDefault();
-
-            _showForm('signin');
-        });
-    }
-
-    // Public Functions
     return {
-        // public functions
         init: function() {
             _login = $('#kt_login');
 
+            if (!_login.length) {
+                console.error("Kontainer login tidak ditemukan!");
+                return;
+            }
+
             _handleSignInForm();
             _handleSignUpForm();
-            _handleForgotForm();
         }
     };
 }();
 
-// Class Initialization
 jQuery(document).ready(function() {
     KTLogin.init();
 });

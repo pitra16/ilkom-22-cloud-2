@@ -21,6 +21,7 @@ Route::middleware('guest')->group(function(){
     Route::controller(AuthController::class)->group(function(){
         Route::get('/login', 'showloginform')->name('login');
         Route::post('/login-post', 'login')->name('login.post');
+        Route::post('actionsignup', 'actionsignup')->name('signup');
     });
 });
 

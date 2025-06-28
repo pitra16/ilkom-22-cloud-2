@@ -94,8 +94,14 @@
 									<h3 class="">Sign Up</h3>
 									<p class="text-muted font-weight-bold">Enter your details to create your account</p>
 								</div>
+								 @if(session('message'))
+            					<div class="alert alert-success">
+                				{{session('message')}}
+            					</div>
+            					@endif
 								<!--begin::Form-->
-								<form class="form" novalidate="novalidate" id="kt_login_signup_form">
+								<form class="form" novalidate="novalidate" id="kt_login_signup_form"/>
+									@csrf
 									<div class="form-group py-3 m-0">
 										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="text" placeholder="Fullname" name="fullname" autocomplete="off" />
 									</div>

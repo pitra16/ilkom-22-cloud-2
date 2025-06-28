@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\ValidationException;
 
 
 class AuthController extends Controller
@@ -59,21 +60,34 @@ class AuthController extends Controller
         return response()->json(['message' => 'Successfully Logout']);
     }
 
-    public function signup(){
-        return view('auth.login');
-    }
+    public function actionsignup(Request $request)
+    {
+        try {
+            $validated = $request->validate([
+                'fullname' => ['required', 'string', 'max:255'], // Added fullname validation
+                'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+                'password' => ['required', 'min:8', 'confirmed'], // Added min length and confirmed for cpassword
+            ]);
 
-    public function actionsignup(Request $request){
-        
-        $validated = $request->validate([
-            'email'=>['required','string','email','max:255','unique:users'],
-            'password'=>['required','confirmed']
-        ]);
+            User::create([
+                'name' => $request->fullname,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+            ]);
 
-        $user= user::create([
-            'name'=> $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+            return response()->json(['success' => true, 'message' => 'Registrasi berhasil! Silakan login.']);
+
+        } catch (ValidationException $e) {
+            // Handle validation errors specifically
+            return response()->json([
+                'success' => false,
+                'message' => 'Registrasi gagal. Harap periksa kembali isian Anda.',
+                'errors' => $e->errors()
+            ], 422); // Use 422 Unprocessable Entity for validation errors
+        } catch (\Exception $e) {
+            // Handle any other general exceptions
+            \Log::error('Registration error: ' . $e->getMessage()); // Log the error for debugging
+            return response()->json(['success' => false, 'message' => 'Terjadi kesalahan server saat registrasi. Silakan coba lagi nanti.'], 500);
+        }
     }
 }
