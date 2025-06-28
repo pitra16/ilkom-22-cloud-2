@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
+
 
 class AuthController extends Controller
 {
@@ -55,5 +57,23 @@ class AuthController extends Controller
         Session::flash('logout_message', 'Successfully Logout');
 
         return response()->json(['message' => 'Successfully Logout']);
+    }
+
+    public function signup(){
+        return view('auth.login');
+    }
+
+    public function actionsignup(Request $request){
+        
+        $validated = $request->validate([
+            'email'=>['required','string','email','max:255','unique:users'],
+            'password'=>['required','confirmed']
+        ]);
+
+        $user= user::create([
+            'name'=> $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
     }
 }
