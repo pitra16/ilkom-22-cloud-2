@@ -1,5 +1,66 @@
 <!-- header start -->
 <header class="header header__style-one">
+    <style>
+        /* Animasi hover pada ikon */
+        .header__icons .icon:hover img {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Animasi hover pada tombol */
+        .header__lang ul li a:hover {
+            text-decoration: underline;
+            transition: text-decoration 0.3s ease;
+        }
+
+        /* Border halus pada input pencarian */
+        .header__search-box input {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            transition: border 0.3s ease;
+        }
+
+        .header__search-box input:focus {
+            border: 1px solid #007bff;
+            outline: none;
+        }
+
+        /* Bayangan pada kartu kategori */
+        .header__cat ul.category li {
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .header__cat ul.category li:hover {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Spasi antar elemen */
+        .header__middle {
+            padding: 15px 0;
+        }
+
+        .header__icons .icon {
+            margin-right: 15px;
+        }
+
+        /* Garis pemisah pada bagian atas */
+        .header__top-info-wrap {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+
+        /* Font tebal pada elemen penting */
+        .header__top-info ul li span {
+            font-weight: bold;
+        }
+
+        .header__lang ul li a {
+            font-style: italic;
+        }
+    </style>
     <div class="header__top-info-wrap d-none d-lg-block">
         <div class="container">
             <div class="header__top-info ul_li_between mt-none-10">
