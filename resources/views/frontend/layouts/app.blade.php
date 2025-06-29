@@ -67,7 +67,7 @@
     <!-- Menyisipkan script tambahan dari halaman lain -->
     @stack('script')
 
-    <!-- Link file JavaScript eksternal -->
+    <!-- Link file JavaScript eksternall -->
     <script src="assets/js/jquery-3.5.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/slick.js"></script>
