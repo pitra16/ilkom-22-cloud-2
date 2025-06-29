@@ -2,12 +2,6 @@
 
 @section('content')
 <main>
-<<<<<<< HEAD
-    <!-- feature start -->
-=======
-
-<!-- feature start -->
->>>>>>> e135b6a87977272d66b2e25b33f7349e539d5ff6
     <div class="feature pt-40 pb-30">
         <div class="container">
             <div class="feature__wrap ul_li">

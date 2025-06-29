@@ -32,6 +32,8 @@
 	<!--begin::Body-->
 	<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
 		<!--begin::Main-->
+		<div class="login login-2 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login" style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Login-->
 			<div class="login login-2 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login">
@@ -153,7 +155,7 @@
 						<!--end::Aside body-->
 						<!--begin: Aside footer for desktop-->
 						<div class="d-flex flex-column-auto justify-content-between mt-15">
-							<div class="text-dark-50 font-weight-bold order-2 order-sm-1 my-2">© 2021 Metronic</div>
+							<div class="text-dark-50 font-weight-bold order-2 order-sm-1 my-2">© Radios Electronic Store</div>
 							<div class="d-flex order-1 order-sm-2 my-2">
 								<a href="#" class="text-muted text-hover-primary">Privacy</a>
 								<a href="#" class="text-muted text-hover-primary ml-4">Legal</a>
@@ -166,21 +168,12 @@
 				</div>
 				<!--begin::Aside-->
 				<!--begin::Content-->
-				<div class="order-1 order-lg-2 flex-column-auto flex-lg-row-fluid d-flex flex-column p-7" style="background-image: url(assets/backend/media/bg/bg-4.jpg);">
-					<!--begin::Content body-->
-					<div class="d-flex flex-column-fluid flex-lg-center">
-						<div class="d-flex flex-column justify-content-center">
-							<h3 class="display-3 font-weight-bold my-7 text-white">Welcome to Metronic!</h3>
-							<p class="font-weight-bold font-size-lg text-white opacity-80">The ultimate Bootstrap, Angular 8, React &amp; VueJS admin theme
-							<br />framework for next generation web apps.</p>
-						</div>
-					</div>
-					<!--end::Content body-->
-				</div>
+
 				<!--end::Content-->
 			</div>
 			<!--end::Login-->
 		</div>
+	</div>
 		<!--end::Main-->
 		<script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>
 		<!--begin::Global Config(global config for global JS scripts)-->
