@@ -61,6 +61,7 @@
             font-style: italic;
         }
     </style>
+    
     <div class="header__top-info-wrap d-none d-lg-block">
         <div class="container">
             <div class="header__top-info ul_li_between mt-none-10">

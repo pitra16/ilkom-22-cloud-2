@@ -1,5 +1,6 @@
          <!-- slide-bar start -->
          <aside class="slide-bar">
+            
             <div class="close-mobile-menu">
                 <a href="javascript:void(0);"><i class="fal fa-times"></i></a>
             </div>
